@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="RGB Picker">
+  <defs>
+    <linearGradient id="rgb-picker-dot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f56565" />
+      <stop offset="50%" stop-color="#48bb78" />
+      <stop offset="100%" stop-color="#4299e1" />
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="6" fill="#1a202c" />
+  <circle cx="16" cy="16" r="8.8" fill="url(#rgb-picker-dot)" />
+</svg>
