@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Provider } from "@/components/ui/provider";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,16 +14,34 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000");
+const title = "ColorSip";
+const description = "画像・動画からピクセル単位で色を抽出するクライアント完結型スポイトツール";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "ColorSip",
-  description: "画像・動画からピクセル単位で色を抽出するクライアント完結型スポイトツール",
+  title,
+  description,
+  keywords: ["カラーピッカー", "スポイトツール", "RGB", "HEX", "色抽出", "画像", "動画"],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: title,
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({
