@@ -15,13 +15,22 @@ const geistMono = Geist_Mono({
 });
 
 const title = "ColorSip";
-const description = "画像・動画からピクセル単位で色を抽出するクライアント完結型スポイトツール";
+const description =
+  "画像・動画からピクセル単位で色を抽出するクライアント完結型スポイトツール";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
-  keywords: ["カラーピッカー", "スポイトツール", "RGB", "HEX", "色抽出", "画像", "動画"],
+  keywords: [
+    "カラーピッカー",
+    "スポイトツール",
+    "RGB",
+    "HEX",
+    "色抽出",
+    "画像",
+    "動画",
+  ],
   alternates: {
     canonical: "/",
   },
@@ -55,6 +64,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <meta
+          name="google-site-verification"
+          content="8cTzQEI4pxfY-HG80Ci4q3OAN6ZGPlb5trirQtfdXSs"
+        />
+      </head>
       <body>
         <Provider>{children}</Provider>
       </body>
